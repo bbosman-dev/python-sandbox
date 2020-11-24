@@ -2,6 +2,12 @@
 
 SURF Assessment for Bram Bosman
 
+This app provides a basic setup to store data for students, courses,
+and students taking courses.
+It builds two docker containers; one for the postgres database,
+the other for the web app with REST api functionality and
+basic authentication.
+
 ## Starting the app
 After cloning the repository, go to project root
 and start up the containers:
@@ -11,9 +17,15 @@ docker-compose up
 ````
 
 ## Create admin
+In another terminal window/tab:
 ````
-docker exec -it surf_web_1 manage.py createsuperuser
+docker exec -it surf_web_1 sh
 ````
+In that shell:
+````
+python manage.py createsuperuser
+````
+(or 'python3', depending on your setup)
 
 Enter username, email and password.
 
