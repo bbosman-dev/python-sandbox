@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# wait for the database to be up and running
 if [ "$DATABASE" = "postgres" ]; then
     echo "Waiting for postgres..."
 
@@ -14,8 +15,5 @@ fi
 echo "Making migrations and migrating the database. "
 python3 manage.py makemigrations main --noinput
 python3 manage.py migrate --noinput
-echo "Creating superuser admin. "
-python3 manage.py createsuperuser --email admin@surfsite.com --username admin --password lantarenpaal.Glazenwasser10
-
 
 exec "$@"
