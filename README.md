@@ -12,7 +12,7 @@ docker-compose up
 
 ## Create admin
 ````
-docker exec -it manage.py createsuperuser
+docker exec -it surf_web_1 manage.py createsuperuser
 ````
 
 Enter username, email and password.
