@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 from studentcourseapp import views
 
+app_name="studentcourse"
 router = routers.DefaultRouter()
 router.register(r'students', views.StudentViewSet)
 router.register(r'courses', views.CourseViewSet)
