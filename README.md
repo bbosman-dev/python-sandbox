@@ -38,3 +38,9 @@ Other api's:
 /studentcourses/
 /studentcourses/{id}
 ````
+
+## Data
+Database date is stored in:
+````
+/postgres-data
+````
