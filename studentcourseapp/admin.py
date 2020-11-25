@@ -17,7 +17,10 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = ('course_name', 'course_information')
     ordering = ('course_name', )
 
+class StudentCourseAdmin(admin.ModelAdmin):
+    list_display = ('course', 'student')
+    list_filter = ['course', 'student']
 
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Course, CourseAdmin)
-admin.site.register(StudentCourse)
+admin.site.register(StudentCourse, StudentCourseAdmin)
